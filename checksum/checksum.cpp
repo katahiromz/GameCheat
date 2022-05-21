@@ -6,7 +6,7 @@
 
 void version(void)
 {
-    puts("checksum Version 0.4 by katahiromz");
+    puts("checksum Version 0.5 by katahiromz");
 }
 
 void usage(void)
@@ -51,7 +51,7 @@ RET do_save(const char *filename, const std::string& contents, DWORD dwCheckSum)
         }
         fclose(fp);
 
-        fprintf(stderr, "SUCCESS: CheckSum: 0x%08lX\n", dwCheckSum);
+        fprintf(stderr, "CheckSum: 0x%08lX (SUCCESS)\n", dwCheckSum);
         return RET_OK;
     }
 
@@ -130,7 +130,7 @@ RET do_it(const char *filename, std::string& contents, ACTION action)
             }
             else
             {
-                fprintf(stderr, "FAILED: 0x%08lX != 0x%08lX\n", opt32->CheckSum, checksum);
+                fprintf(stderr, "ERROR: 0x%08lX != 0x%08lX (FAILED)\n", opt32->CheckSum, checksum);
                 return RET_CHECKSUM_FAIL;
             }
         }
@@ -148,12 +148,13 @@ RET do_it(const char *filename, std::string& contents, ACTION action)
             }
             else
             {
-                fprintf(stderr, "FAILED: 0x%08lX != 0x%08lX\n", opt64->CheckSum, checksum);
+                fprintf(stderr, "ERROR: 0x%08lX != 0x%08lX (FAILED)\n", opt64->CheckSum, checksum);
                 return RET_CHECKSUM_FAIL;
             }
         }
     }
 
+        fprintf(stderr, "ERROR: Logical error.\n");
     return RET_LOGICAL_ERROR;
 }
 
