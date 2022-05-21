@@ -72,7 +72,7 @@ RET do_it(const char *filename, std::string& contents, ACTION action)
     nt = CheckSumMappedFile(&contents[0], contents.size(), &header_sum, &checksum);
     if (nt == NULL)
     {
-        fprintf(stderr, "FAILED: CheckSumMappedFile\n");
+        fprintf(stderr, "ERROR: CheckSumMappedFile\n");
         return RET_CHECKSUM_FAIL;
     }
 
@@ -87,7 +87,7 @@ RET do_it(const char *filename, std::string& contents, ACTION action)
         opt64 = (IMAGE_OPTIONAL_HEADER64*)&nt->OptionalHeader;
         break;
     default:
-        fprintf(stderr, "FAILED: Unknown format\n");
+        fprintf(stderr, "ERROR: Unknown format\n");
         return RET_INVALID_FORMAT;
     }
 
