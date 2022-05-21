@@ -217,13 +217,13 @@ int main(int argc, char **argv)
 
     if ((int)bAdd + (int)bRemove + (int)bTest >= 2)
     {
-        fprintf(stderr, "ERROR: --add, --remove, --test are mutually exclusive.\n");
+        fprintf(stderr, "ERROR: --add, --remove, and --test are mutually exclusive.\n");
         return RET_INVALID_ARG;
     }
 
     if ((int)bAdd + (int)bRemove + (int)bTest == 0)
     {
-        fprintf(stderr, "ERROR: Please specify either --add, --remove or --test.\n");
+        fprintf(stderr, "ERROR: Please specify either --add, --remove, or --test.\n");
         return RET_INVALID_ARG;
     }
 
