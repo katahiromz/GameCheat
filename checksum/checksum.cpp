@@ -6,15 +6,15 @@
 
 void version(void)
 {
-    puts("checksum Version 0.5 by katahiromz");
+    puts("checksum Version 0.6 by katahiromz");
 }
 
 void usage(void)
 {
     puts(
-        "Usage: checksum --add your_file.exe\n"
+        "Usage: checksum --add    your_file.exe\n"
         "       checksum --remove your_file.exe\n"
-        "       checksum --test your_file.exe\n"
+        "       checksum --test   your_file.exe\n"
         "       checksum --help\n"
         "       checksum --version"
     );
