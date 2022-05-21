@@ -48,10 +48,11 @@ WinMain(HINSTANCE   hInstance,
         LPSTR       lpCmdLine,
         INT         nCmdShow)
 {
-#ifdef NDEBUG
     if (IsDebuggerPresent())
+    {
+        MessageBox(NULL, TEXT("I don't like debugger."), NULL, MB_ICONERROR);
         return -1;
-#endif
+    }
 
     g_hInst = hInstance;
     InitCommonControls();
