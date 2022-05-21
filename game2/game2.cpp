@@ -7,20 +7,21 @@ int score = 123456;
 
 BOOL checkCheckSum(HINSTANCE hInstance)
 {
-    CHAR szBuff[MAX_PATH];
-    GetModuleFileNameA(hInstance, szBuff, MAX_PATH);
+    WCHAR szBuff[MAX_PATH];
+    GetModuleFileNameW(hInstance, szBuff, MAX_PATH);
 
-    FILE *fp = fopen(szBuff, "rb");
+    FILE *fp = _wfopen(szBuff, L"rb");
     if (!fp)
         return FALSE;
 
     std::string contents;
+    CHAR buf[MAX_PATH];
     for (;;)
     {
-        size_t cb = fread(szBuff, 1, _countof(szBuff), fp);
+        size_t cb = fread(buf, 1, _countof(buf), fp);
         if (!cb)
             break;
-        contents.append(szBuff, cb);
+        contents.append(buf, cb);
     }
 
     fclose(fp);
