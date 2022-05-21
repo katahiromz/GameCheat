@@ -1,9 +1,16 @@
 #include <windows.h>
 #include <stdio.h>
 
-int main(void)
+int score = 123456;
+
+INT WINAPI
+WinMain(HINSTANCE   hInstance,
+        HINSTANCE   hPrevInstance,
+        LPSTR       lpCmdLine,
+        INT         nCmdShow)
 {
-    int score = 123456;
-    printf("Your score is %d.\n", score);
+    TCHAR szText[MAX_PATH];
+    wsprintf(szText, TEXT("Your score is %d."), score);
+    MessageBox(NULL, szText, TEXT("SCORE"), MB_ICONINFORMATION);
     return 0;
 }
