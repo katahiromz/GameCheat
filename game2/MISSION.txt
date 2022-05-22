@@ -1,3 +1,3 @@
-Change score to 999999.
+Change the score to 999999 by using a binary editor.
 
 NOTE: You have to update the checksum of the EXE file.

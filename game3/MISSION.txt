@@ -1,3 +1,5 @@
-1) Extract the dog image from game3.exe.
-2) Replace dog.bmp with tanuki.bmp.
+1) Extract the dog image from game3.exe by using RisohEditor.
+2) Replace the dog image with the tanuki image by using RisohEditor.
 3) Enable debugging.
+
+See also: https://github.com/katahiromz/RisohEditor

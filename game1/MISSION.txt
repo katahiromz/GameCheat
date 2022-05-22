@@ -1,1 +1,1 @@
-Change score to 999999.
+Change the score to 999999 by using a binary editor.
