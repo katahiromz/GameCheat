@@ -1,0 +1,2 @@
+1) Replace dog.bmp with tanuki.bmp.
+2) Enable debugging.
