@@ -1,5 +1,5 @@
 1) Extract the dog image from game3.exe by using RisohEditor.
 2) Replace the dog image with the tanuki image by using RisohEditor.
-3) Enable debugging by a binary editor (replace IsDebuggerPresent with SwitchToThread).
+3) Enable debugging by a binary editor (replace "IsDebuggerPresent\0" with "SwitchToThread\0").
 
 See also: https://github.com/katahiromz/RisohEditor
