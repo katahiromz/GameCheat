@@ -1,1 +1,3 @@
 Make score 999999 from 123456.
+
+NOTE: You have to update the checksum of the EXE file.

@@ -1,1 +1,3 @@
-Slow down the counter.
+Slow down the counter by API hook.
+
+See also: https://github.com/katahiromz/ApiHook
